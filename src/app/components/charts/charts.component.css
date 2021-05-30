@@ -1,0 +1,19 @@
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Tahoma;
+  background-color: #1c1e27;
+}
+
+.charts-container__circle-chart-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}

@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #303549;
+}
+
+.log-out {
+  width: 65px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #272a38;
+  border-left: 1px solid #1c1e27;
+}
+
+.log-out__icon {
+  cursor: pointer;
+}
+
+.log-out__icon:hover .log-out__icon-path {
+  fill: #0089ff;
+  transition: fill 0.15s ease;
+}
+
+.log-out__icon-path {
+  fill: #606060;
+  transition: fill 0.15s ease;
+}
+
+.navbar__links-container {
+  flex: 1;
+  height: 60px;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #272a38;
+}
+.navbar__links-container > button {
+  margin-right: 10px;
+}
+.navbar__links-container > button:last-child {
+  margin-right: 0px;
+}
+
+.links-container__button {
+  display: block;
+  font-family: Tahoma;
+  font-size: 13px;
+  height: 40px;
+  width: 147px;
+  padding: 0 20px;
+  border-radius: 2px;
+  border: none;
+  background-color: #303549;
+  color: #8c99b2;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  cursor: pointer;
+}
+.links-container__button--active {
+  color: #ffffff;
+  background-color: #0089ff;
+}
+.links-container__button:hover {
+  color: #ffffff;
+}
+
+.links-container__button:focus {
+  outline: none;
+}

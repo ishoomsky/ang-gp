@@ -1,0 +1,16 @@
+.refine-plan-chart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.refine-plan-chart__bg-layer {
+  position: absolute;
+  z-index: 1;
+}
+
+.refine-plan-chart__d3-layer {
+  position: absolute;
+  z-index: 2;
+}

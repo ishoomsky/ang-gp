@@ -1,0 +1,18 @@
+.produce-chart {
+  /* width: 335px;
+  height: 335px; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produce-chart__bg-layer {
+  position: absolute;
+  z-index: 1;
+}
+
+.produce-chart__d3-layer {
+  position: absolute;
+  z-index: 2;
+}

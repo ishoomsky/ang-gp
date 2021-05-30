@@ -1,0 +1,114 @@
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Tahoma;
+  background-color: #1c1e27;
+}
+
+.indicators-container {
+  align-self: center;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  width: 379px;
+  height: 512px;
+  border: 1px solid #282a38;
+  border-radius: 3px;
+}
+
+.indicators-container__header {
+  background-color: #272a38;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #d7e2f2;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.indicators-container__header > div {
+  margin-right: 13px;
+}
+.indicators-container__header > div:last-child {
+  margin-right: 0;
+}
+
+.header__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.header__more {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.indicators-container__table-headers {
+  background-color: #1d1f2b;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #8c99b2;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+.table-headers__parameter-title {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.table-headers__fact-title {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.table-headers__model-title {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.indicators-container_content-container {
+  overflow-y: scroll;
+  height: 433px;
+  background-color: #1c1f2b;
+  padding-top: 10px;
+  padding-left: 9px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  box-shadow: inset 0px 11px 8px -10px #131313;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-left: 1px solid #272a38;
+  border-right: 1px solid #272a38;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #272a38;
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}

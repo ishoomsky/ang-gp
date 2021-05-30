@@ -1,0 +1,95 @@
+<div class="indicator-container">
+  <div
+    (click)="toggleIndicator.emit(props.id)"
+    class="indicator-container__header"
+  >
+    <div class="header__parameter-icon">
+      <svg
+        [ngClass]="{
+          'parameter-icon__svg-element--normal': isOpen === false,
+          'parameter-icon__svg-element--active': isOpen === true
+        }"
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.9489 15.9497C13.2123 18.6863 8.78586 18.6863 6.04936 15.9497C3.31285 13.2132 3.31285 8.78676 6.04936 6.05025C8.78586 3.31375 13.2123 3.31375 15.9489 6.05025C18.6854 8.78676 18.6854 13.2132 15.9489 15.9497Z"
+          stroke="#606580"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10.9991 7.78975L10.9991 14.2103"
+          stroke="#606580"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7.78882 11L14.2093 11"
+          stroke="#606580"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <div class="header__parameter-title" [class.title--active]="isOpen">
+      {{ props?.name }}
+    </div>
+    <div class="header__parameter-deviance">
+      Отклонений: {{ getDeviation() }}
+    </div>
+  </div>
+  <div *ngIf="isOpen" class="indicator-container__content">
+    <div
+      *ngFor="let parameter of props?.parameters"
+      class="content__item"
+      (click)="setActiveParameterId(parameter.id)"
+    >
+      <div
+        class="item__group-name-unit"
+        [class.group-name-unit--normal]="parameter.state === 'normal'"
+        [class.group-name-unit--danger]="parameter.state === 'danger'"
+        [class.group-name-unit--active]="activeParameterId === parameter.id"
+      >
+        <div
+          class="group-name-unit__item_name"
+          [class.group-name-unit__item_name--normal]="
+            parameter.state === 'normal'
+          "
+          [class.group-name-unit__item_name--good]="parameter.state === 'good'"
+          [class.group-name-unit__item_name--danger]="
+            parameter.state === 'danger'
+          "
+        >
+          {{ parameter?.name }}
+        </div>
+        <div class="group-name-unit__item__unit">
+          {{ parameter?.unit }}
+        </div>
+      </div>
+
+      <div
+        class="item__fact"
+        [class.item__fact--normal]="parameter.state === 'normal'"
+        [class.item__fact--danger]="parameter.state === 'danger'"
+        [class.item__fact--active]="activeParameterId === parameter.id"
+      >
+        {{ parameter?.fact.toLocaleString("ru-RU") }}
+      </div>
+      <div
+        class="item__model"
+        [class.item__model--normal]="parameter.state === 'normal'"
+        [class.item__model--active]="activeParameterId === parameter.id"
+        [class.item__model--danger]="parameter.state === 'danger'"
+      >
+        {{ parameter?.model.toLocaleString("ru-RU") }}
+      </div>
+    </div>
+  </div>
+</div>

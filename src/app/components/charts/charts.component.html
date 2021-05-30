@@ -1,0 +1,12 @@
+<div class="page-container">
+  <app-navbar></app-navbar>
+  <div class="charts-container__circle-chart-container">
+    <app-produce-chart [width]="335" [data]="dataProduce"></app-produce-chart>
+
+    <app-refine-plan-chart
+      [width]="335"
+      [data]="dataRefine"
+    ></app-refine-plan-chart>
+    <app-store-chart [width]="788" [data]="dataStore"></app-store-chart>
+  </div>
+</div>

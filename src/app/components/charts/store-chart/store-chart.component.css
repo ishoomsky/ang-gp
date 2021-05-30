@@ -1,0 +1,21 @@
+.store-chart {
+  /* width: 788px;
+  height: 217px; */
+  fill: none;
+  position: relative;
+}
+
+.store-chart__static-svg {
+  /* width: 788px;
+  height: 217px; */
+  fill: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.store-chart__d3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
